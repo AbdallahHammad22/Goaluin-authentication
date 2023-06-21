@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:goaluin_flutter/control/home_controller.dart';
 import 'package:goaluin_flutter/view/registration/screen/onboarding.dart';
 
 
 void main() {
   runApp(const MyApp());
+  Get.put(HomeController());
 }
 
 class MyApp extends StatelessWidget {
@@ -16,10 +18,12 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'goaluin-flutter-assignment',
+      
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
       home: const BoardingScreen(),
+      
     );
   }
 }
